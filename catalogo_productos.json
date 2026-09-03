@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cama Queen Size",
+        "categoria": "Cama",
+        "marca": "DormiLux",
+        "tamaño": "Queen",
+        "precio": 3500,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "nombre": "Cama King Size",
+        "categoria": "Cama",
+        "marca": "Matrimoon",
+        "tamaño": "King",
+        "precio": 4200,
+        "stock": 4
+    },
+    {
+        "id": 3,
+        "nombre": "Cama Individual",
+        "categoria": "Cama",
+        "marca": "SleepEasy",
+        "tamaño": "Individual",
+        "precio": 2200,
+        "stock": 7
+    },
+    {
+        "id": 4,
+        "nombre": "Colchón Memory Foam",
+        "categoria": "Colchón",
+        "marca": "RestFlex",
+        "tamaño": "Queen",
+        "precio": 1800,
+        "stock": 8
+    },
+    {
+        "id": 5,
+        "nombre": "Colchón Ortopédico",
+        "categoria": "Colchón",
+        "marca": "SpineCare",
+        "tamaño": "King",
+        "precio": 2400,
+        "stock": 6
+    },
+    {
+        "id": 6,
+        "nombre": "Colchón de Muelles",
+        "categoria": "Colchón",
+        "marca": "SleepWell",
+        "tamaño": "Matrimonial",
+        "precio": 1500,
+        "stock": 9
+    },
+    {
+        "id": 7,
+        "nombre": "Mesa de Noche",
+        "categoria": "Mesa de noche",
+        "marca": "HomeLine",
+        "tamaño": "Mediana",
+        "precio": 650,
+        "stock": 10
+    },
+    {
+        "id": 8,
+        "nombre": "Mesa de Noche con Cajón",
+        "categoria": "Mesa de noche",
+        "marca": "WoodStyle",
+        "tamaño": "Grande",
+        "precio": 820,
+        "stock": 8
+    },
+    {
+        "id": 9,
+        "nombre": "Tocador de Madera",
+        "categoria": "Tocador",
+        "marca": "Elegance",
+        "tamaño": "Mediano",
+        "precio": 1100,
+        "stock": 5
+    },
+    {
+        "id": 10,
+        "nombre": "Tocador Moderno",
+        "categoria": "Tocador",
+        "marca": "LuxHome",
+        "tamaño": "Grande",
+        "precio": 1350,
+        "stock": 4
+    }
+]
