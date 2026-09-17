@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "titulo": "El negocio del siglo XXI",
+        "autor": "Robert Kiyosaki",
+        "categoria": "finanzas",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 2,
+        "titulo": "Padre rico, padre pobre",
+        "autor": "Robert Kiyosaki",
+        "categoria": "finanzas",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 3,
+        "titulo": "La riqueza de las naciones",
+        "autor": "Adam Smith",
+        "categoria": "finanzas",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 4,
+        "titulo": "Harry Potter y la piedra filosofal",
+        "autor": "J.K. Rowling",
+        "categoria": "fantasia",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 5,
+        "titulo": "El señor de los anillos",
+        "autor": "J.R.R. Tolkien",
+        "categoria": "fantasia",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 6,
+        "titulo": "Cien años de soledad",
+        "autor": "Gabriel García Márquez",
+        "categoria": "fantasia",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 7,
+        "titulo": "Aprende matemáticas desde cero",
+        "autor": "Ana López",
+        "categoria": "educacion",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 8,
+        "titulo": "Biología para principiantes",
+        "autor": "Carlos Vega",
+        "categoria": "educacion",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 9,
+        "titulo": "Historia del mundo",
+        "autor": "Martín Torres",
+        "categoria": "educacion",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 10,
+        "titulo": "Mi primera novela coreana",
+        "autor": "Jin Park",
+        "categoria": "kdrama",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 11,
+        "titulo": "K-drama y cultura pop",
+        "autor": "Ingrid Kim",
+        "categoria": "kdrama",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 12,
+        "titulo": "Secretos de los dramas coreanos",
+        "autor": "Sara Min",
+        "categoria": "kdrama",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 13,
+        "titulo": "Emprende sin miedo",
+        "autor": "Lina Morales",
+        "categoria": "emprendimiento",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 14,
+        "titulo": "Startup 101",
+        "autor": "Pablo Ruiz",
+        "categoria": "emprendimiento",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 15,
+        "titulo": "Tu negocio paso a paso",
+        "autor": "Valentina Cruz",
+        "categoria": "emprendimiento",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 16,
+        "titulo": "Trading para principiantes",
+        "autor": "Gabriel Flores",
+        "categoria": "trading",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 17,
+        "titulo": "Análisis técnico esencial",
+        "autor": "Miguel Ortega",
+        "categoria": "trading",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 18,
+        "titulo": "Rendimiento y disciplina",
+        "autor": "Tomás Rivera",
+        "categoria": "trading",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 19,
+        "titulo": "Crecimiento personal intensivo",
+        "autor": "Mariana Ahumada",
+        "categoria": "crecimiento_personal",
+        "tipo": "fisico",
+        "disponible": true,
+        "ruta_archivo": ""
+    },
+    {
+        "id": 20,
+        "titulo": "Mindset 360",
+        "autor": "Fernanda Soto",
+        "categoria": "crecimiento_personal",
+        "tipo": "digital",
+        "disponible": true,
+        "ruta_archivo": ""
+    }
+]

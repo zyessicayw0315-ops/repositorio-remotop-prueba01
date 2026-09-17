@@ -1,0 +1,15 @@
+[
+    {
+        "nombre": "Administrador",
+        "email": "admin@biblioteca.local",
+        "usuario": "elmartinezm",
+        "password": "Iiecg12.",
+        "membresia": "gold",
+        "rol": "admin",
+        "activo": true,
+        "fecha_registro": "2026-09-16",
+        "fecha_pago": null,
+        "libros_en_casa": [],
+        "lectura_inicio": null
+    }
+]
