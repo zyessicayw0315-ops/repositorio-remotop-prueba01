@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Venta de Boletos de Autobús</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #1a365d;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #2b6cb0;
+            color: white;
+            font-size: 16px;
+        }
+        tr:hover {
+            background-color: #ebf8ff;
+        }
+        .badge-green {
+            background-color: #38a169;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .badge-red {
+            background-color: #e53e3e;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2d3748;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .btn-submit {
+            background-color: #dd6b20;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background-color: #c05621;
+        }
+        .btn-change {
+            background-color: #319795;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .alert {
+            padding: 12px;
+            background-color: #feebc8;
+            color: #742a2a;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🚌 Terminal de Pasajeros - Compra de Boletos</h1>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="alert">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <h2>📋 Horarios y Disponibilidad de Rutas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Destino</th>
+                <th>Días Disponibles</th>
+                <th>Horarios de Salida</th>
+                <th>Chofer Asignado</th>
+                <th>Asientos Libres</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r in rutas %}
+            <tr>
+                <td>{{ r[0] }}</td>
+                <td><strong>{{ r[1] }}</strong></td>
+                <td>{{ r[2] }}</td>
+                <td>{{ r[3] }}</td>
+                <td>👨‍✈️ {{ r[4] }}</td>
+                <td>
+                    {% if r[5] > 0 %}
+                        <span class="badge-green">{{ r[5] }} disponibles</span>
+                    {% else %}
+                        <span class="badge-red">AGOTADO</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="card">
+        <h2>🎫 Comprar Boleto</h2>
+        <form action="/comprar" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo del Pasajero:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Yessica Zhang" required>
+            </div>
+            <div class="form-group">
+                <label for="cedula">Cédula de Identidad:</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Ej. V-28123456" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Número de Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Ej. 0412-1234567" required>
+            </div>
+            <div class="form-group">
+                <label for="ruta_id">Seleccione Destino y Ruta:</label>
+                <select id="ruta_id" name="ruta_id" required>
+                    {% for r in rutas %}
+                        <option value="{{ r[0] }}">{{ r[1] }} ({{ r[2] }} - {{ r[3] }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dia">Día del Viaje:</label>
+                <input type="text" id="dia" name="dia" placeholder="Ej. Lunes" required>
+            </div>
+            <div class="form-group">
+                <label for="horario">Horario de Salida Elegido:</label>
+                <input type="text" id="horario" name="horario" placeholder="Ej. 06:00 AM" required>
+            </div>
+            <button type="submit" class="btn-submit">Confirmar y Comprar Boleto</button>
+        </form>
+    </div>
+
+    <h2>📑 Boletos Emitidos y Opción de Cambio / Reagendamiento</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Boleto</th>
+                <th>Pasajero</th>
+                <th>Cédula</th>
+                <th>Teléfono</th>
+                <th>Destino</th>
+                <th>Día</th>
+                <th>Horario</th>
+                <th>Cambiar Fecha/Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for b in boletos %}
+            <tr>
+                <td>#{{ b[0] }}</td>
+                <td>{{ b[1] }}</td>
+                <td>{{ b[2] }}</td>
+                <td>{{ b[3] }}</td>
+                <td><strong>{{ b[4] }}</strong></td>
+                <td>{{ b[5] }}</td>
+                <td>{{ b[6] }}</td>
+                <td>
+                    <form action="/cambiar/{{ b[0] }}" method="POST" style="display:flex; gap: 5px;">
+                        <input type="text" name="nuevo_dia" placeholder="Nuevo Día" style="width: 90px; padding: 4px;" required>
+                        <input type="text" name="nuevo_horario" placeholder="Hora" style="width: 80px; padding: 4px;" required>
+                        <button type="submit" class="btn-change">Cambiar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
